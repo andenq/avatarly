@@ -80,7 +80,8 @@ class Avatarly
         font_color: '#FFFFFF',
         size: 32,
         font: "#{fonts}/Roboto.ttf",
-        format: "png" }
+        format: "png",
+        font_weight: 400 }
     end
 
     def parse_options(opts)
@@ -89,6 +90,7 @@ class Avatarly
       opts[:font] = default_options[:font] unless Pathname(opts[:font]).exist?
       opts[:font_size] ||= opts[:size] / 2
       opts[:font_size] = opts[:font_size].to_i
+      opts[:font_weight] = opts[:font_weight].to_i
       opts
     end
   end
