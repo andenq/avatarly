@@ -53,6 +53,7 @@ class Avatarly
         self.font = opts[:font]
         self.fill = opts[:font_color]
         self.gravity = Magick::CenterGravity
+        self.font_weight = opts[:font_weight]
       end.annotate(canvas, 0, 0, 0, 0, text)
     end
 
